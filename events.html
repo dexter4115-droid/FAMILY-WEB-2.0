@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Family Events</title>
+  <link rel="stylesheet" href="script/script/style/main.css" />
+  <link rel="stylesheet" href="script/script/style/style/events.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Our Family</a>
+    <nav class="nav">
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html" aria-current="page">Events</a></li>
+        <li><a href="albums.html">Photo Albums</a></li>
+        <li><a href="private.html">Private</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Upcoming events</h1>
+
+    <section id="new-year-picnic" class="event-card">
+      <h2>New Year Picnic</h2>
+      <p><strong>When:</strong> Jan 1, 2026 • 10:00–16:00</p>
+      <p><strong>Where:</strong> Karura Forest, Gate A</p>
+      <p><strong>Details:</strong> Potluck, games, and a photo walk.</p>
+
+      <details class="pack-list">
+        <summary>What to bring</summary>
+        <ul>
+          <li>Snacks or a sharing dish</li>
+          <li>Water and mats</li>
+          <li>Camera or phone for photos</li>
+        </ul>
+      </details>
+
+      <form id="rsvp-form" class="rsvp" autocomplete="on">
+        <h3>RSVP</h3>
+        <div class="grid">
+          <label>
+            Name
+            <input name="name" type="text" required />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" required />
+          </label>
+          <label>
+            Phone (optional)
+            <input name="phone" type="tel" />
+          </label>
+          <label>
+            Guests
+            <input name="guests" type="number" min="0" value="0" />
+          </label>
+        </div>
+        <label class="full">
+          Message (dietary needs, etc.)
+          <textarea name="message" rows="3"></textarea>
+        </label>
+        <button class="btn primary" type="submit">Send RSVP</button>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <h2>Past events</h2>
+    <section class="past-events">
+      <article class="event-card small">
+        <h3>Christmas 2025</h3>
+        <p>Marsabit • Dec 25, 2025</p>
+        <a class="btn small" href="albums.html#2025-christmas">See photos</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Our Family</p>
+  </footer>
+
+  <script src="scripts/events.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+.event-card{
+  background:#fff; border:1px solid var(--border); border-radius:12px; padding:1rem; margin:1rem 0;
+}
+.event-card h2{ margin-top:0; }
+.pack-list summary{ cursor:pointer; color:var(--primary); }
+.rsvp{ margin-top:1rem; }
+.rsvp .grid{ display:grid; grid-template-columns:1fr; gap:0.75rem; }
+.rsvp label{ display:flex; flex-direction:column; gap:0.3rem; }
+.rsvp input, .rsvp textarea{
+  padding:0.6rem; border:1px solid var(--border); border-radius:8px; font:inherit;
+}
+.rsvp .full{ grid-column:1 / -1; }
+.form-status{ margin-top:0.5rem; color:var(--muted); }
+@media(min-width:640px){ .rsvp .grid{ grid-template-columns:repeat(2,1fr); } }

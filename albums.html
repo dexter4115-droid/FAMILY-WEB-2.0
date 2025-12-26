@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Family Photo Albums</title>
+  <link rel="stylesheet" href="script/script/style/main.css" />
+  <link rel="stylesheet" href="script/script/style/style/style/style/gallery.css" />
+  <style>
+    .carousel-container {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel-gallery {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .carousel-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+
+    .carousel-prev, .carousel-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel-prev {
+      left: 10px;
+    }
+
+    .carousel-next {
+      right: 10px;
+    }
+
+    .carousel-prev:hover, .carousel-next:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Our Family</a>
+    <nav class="nav">
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="albums.html" aria-current="page">Photo Albums</a></li>
+        <li><a href="private.html">Private</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Photo albums</h1>
+
+    <section id="2025-christmas" class="album">
+      <h2>Christmas 2025 • Marsabit</h2>
+      <p>Family gathering and gift exchange.</p>
+
+      <div class="gallery" data-album="2025-christmas">
+        <!-- Images auto-injected by gallery.js based on images/albums/2025-newyear or 2024-christmas etc. -->
+      </div>
+    </section>
+
+    <section id="2026-newyear" class="album">
+      <h2>New Year 2026 • Nairobi</h2>
+      <p>Picnic at Karura Forest.</p>
+
+      <div class="gallery" data-album="2025-newyear">
+        <!-- Auto-injected -->
+      </div>
+    </section>
+
+    <section id="family-reunion" class="album">
+      <h2>Family Reunion 2026</h2>
+      <p>Annual family gathering with games and memories.</p>
+
+      <div class="gallery" data-album="family-reunion">
+        <!-- Images will be added here -->
+      </div>
+    </section>
+
+    <section id="summer-vacation" class="album">
+      <h2>Summer Vacation 2026</h2>
+      <p>Beach adventures and coastal explorations.</p>
+
+      <div class="gallery" data-album="summer-vacation">
+        <!-- Images will be added here -->
+      </div>
+    </section>
+
+    <section id="birthday-celebrations" class="album">
+      <h2>Birthday Celebrations</h2>
+      <p>Cake, candles, and family fun.</p>
+
+      <div class="gallery" data-album="birthday-celebrations">
+        <!-- Images will be added here -->
+      </div>
+    </section>
+
+    <section id="recent-photos" class="album">
+      <h2>Recent Photos</h2>
+      <p>Latest family moments and memories.</p>
+
+      <div class="carousel-container">
+        <button class="carousel-prev" aria-label="Previous image">‹</button>
+        <div class="carousel-gallery" data-album="recent-photos">
+          <!-- Images will be loaded here -->
+        </div>
+        <button class="carousel-next" aria-label="Next image">›</button>
+      </div>
+    </section>
+
+    <section id="isakos-photos" class="album">
+      <h2>ISAKOS Photos</h2>
+      <p>Family moments and memories.</p>
+
+      <div class="carousel-container">
+        <button class="carousel-prev" aria-label="Previous image">‹</button>
+        <div class="carousel-gallery" data-album="isakos-photos">
+          <!-- Images will be loaded here -->
+        </div>
+        <button class="carousel-next" aria-label="Next image">›</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Our Family</p>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <img class="lightbox-img" alt="" />
+    <p class="lightbox-caption"></p>
+  </div>
+
+  <script src="script/script/gallery.js"></script>
+</body>
+</html>

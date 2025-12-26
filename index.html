@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Family</title>
+  <meta name="description" content="Family events, photo albums, and memories." />
+  <link rel="preload" href="images/hero.jpg" as="image">
+  <link rel="stylesheet" href="script/script/style/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Our Family</a>
+    <nav class="nav">
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-list">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="albums.html">Photo Albums</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="images/hero.jpg" alt="Family moments collage" />
+      <div class="hero-text">
+        <h1>Together is our favorite place</h1>
+        <p>Share events, browse albums, and keep everyone connected.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="events.html">Upcoming Events</a>
+          <a class="btn" href="albums.html">View Albums</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="collage">
+      <h2>Family Moments</h2>
+      <div class="collage-grid">
+        <img src="images/albums/isakos-photos/01.jpg" alt="Family moment 1" />
+        <img src="images/albums/isakos-photos/10.jpg" alt="Family moment 2" />
+        <img src="images/albums/isakos-photos/20.jpg" alt="Family moment 3" />
+        <img src="images/albums/isakos-photos/30.jpg" alt="Family moment 4" />
+        <img src="images/albums/isakos-photos/40.jpg" alt="Family moment 5" />
+        <img src="images/albums/isakos-photos/50.jpg" alt="Family moment 6" />
+      </div>
+    </section>
+
+    <section class="highlights">
+      <h2>Latest highlights</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>New Year Picnic</h3>
+          <p>Karura Forest • Jan 1, 2026</p>
+          <a class="btn small" href="events.html#new-year-picnic">Details</a>
+        </article>
+        <article class="card">
+          <h3>Christmas 2025</h3>
+          <p>Album: Marsabit family gathering</p>
+          <a class="btn small" href="albums.html#2025-christmas">Open album</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Our Family</p>
+  </footer>
+
+  <script src="script/main.js"></script>
+</body>
+</html>

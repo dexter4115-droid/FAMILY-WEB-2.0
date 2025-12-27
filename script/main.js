@@ -1,12 +1,17 @@
-// Year
-document.getElementById('year').textContent = new Date().getFullYear();
+// Year (guarded)
+const yearEl = document.getElementById('year');
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
 
-// Mobile nav
+// Mobile nav (guarded)
 const toggle = document.querySelector('.nav-toggle');
 const list = document.querySelector('.nav-list');
 if (toggle) {
   toggle.addEventListener('click', () => {
-    const visible = list.style.display === 'block';
+    if (!list) return;
+    // Use computed style to detect visibility reliably
+    const visible = getComputedStyle(list).display === 'block';
     list.style.display = visible ? 'none' : 'block';
   });
 }
